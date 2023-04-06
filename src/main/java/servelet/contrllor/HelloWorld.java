@@ -22,7 +22,9 @@ public class HelloWorld extends HttpServlet {
 	    	message +=1;
 	        // Set response content type
 	        response.setContentType("text/html");
-	 
+	        System.out.println(request.getServletPath()+"thoi di dung gia bo nua");
+	        System.out.println(request.getServletContext()+"thoi di dung gia bo nua");
+	        System.out.println(request.getAuthType()+"noi dung  nay"+request.getLocalPort());
 	        // Actual logic goes here.
 	        PrintWriter out = response.getWriter();
 	        out.println("<h1>" + message + "</h1>");
